@@ -8,8 +8,8 @@ int main(int argc, const char* argv[]) {
     FILE* fp_dst = fopen(argv[2], "w");
 
     char buffer[100];
-    fgets(buffer, 100, fp_src);
-    fputs(buffer, fp_dst);
+    while(fgets(buffer, sizeof(buffer), fp_src) != NULL)
+        fputs(buffer, fp_dst);
     
     fclose(fp_src);
     fclose(fp_dst);
