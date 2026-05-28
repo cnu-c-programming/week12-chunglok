@@ -8,7 +8,9 @@ int main(int argc, const char* argv[]) {
     FILE* fp = fopen(argv[1], "r");
     const char* target_str = argv[2];
 
-
+    scanf("%s", &target_str);
+    if(strcmp(target_str, argv[1])==0)
+        fprintf(fp, "%s", target_str);
     
     fclose(fp);
 }
