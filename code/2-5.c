@@ -7,8 +7,8 @@ int main(int argc, const char* argv[]) {
     FILE* fp_src = fopen(argv[1], "r");
     FILE* fp_dst = fopen(argv[2], "w");
 
-    fscanf(fp_src, "%s", argv[1]);
-    fprintf(fp_dst, "%s", argv[1]);
+    fgets(argv[1], 100, fp_src);
+    fputs(argv[1], fp_dst);
     
     fclose(fp_src);
     fclose(fp_dst);
