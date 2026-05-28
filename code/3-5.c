@@ -11,12 +11,12 @@ int main(int argc, const char* argv[]) {
     int sum = 0;
     int num;
     char err[64];
-    while(!feof(fp)){
-        fscanf(fp, "%d", &num);
-        fscanf(fp, "%s", &err);
-        sum += num;
-        if(err[0] < '0' || err[0] > '9')
+    while(fscanf(fp, "%s", &err) == 1){
+        if(sscanf(err, "%d", &num) == 1)
+            sum += num;
+        else
             fprintf(stderr, "invalid input %s\n", err);
+            
     }
 
     printf("sum: %d\n", sum);
