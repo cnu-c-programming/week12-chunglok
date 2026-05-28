@@ -3,7 +3,7 @@
 int main(int argc, const char* argv[], const char* envp[]) {
     char e = envp[0];
 
-    while(*envp != NULL) {
+    while(e != NULL) {
         printf("%s\n", e);
         e++;
     }
