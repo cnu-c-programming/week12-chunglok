@@ -1,10 +1,10 @@
 #include <stdio.h>
 
-int main(int argc, char* argv[]){
+int main(int argc, const char* argv[]){
     if(argc < 2)
         return 0;
 
-    for(int i = 0; i < 1; i++){
+    for(int i = 0; i < 2; i++){
         const char* filename = argv[i];
         char buffer[256] = {0};
 
