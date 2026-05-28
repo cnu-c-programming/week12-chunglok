@@ -12,7 +12,7 @@ int main(int argc, const char* argv[]) {
     if(fp == NULL)
         return 0;
     
-    fgets(fp, 10, buffer);
+    fgets(buffer, 10, fp);
     fclose(fp);
 
     printf("%s\n", buffer);
